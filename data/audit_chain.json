@@ -1,0 +1,1142 @@
+[
+    {
+        "index": 0,
+        "timestamp": 1764270936.4649234,
+        "data": {
+            "message": "Genesis Block"
+        },
+        "previous_hash": "0",
+        "hash": "8d7e092d533f5727116ca8d5c831c0f16e7ca696ff6b688f8f28b1ca1c1a4b01"
+    },
+    {
+        "index": 1,
+        "timestamp": 1764270947.5954764,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "8d7e092d533f5727116ca8d5c831c0f16e7ca696ff6b688f8f28b1ca1c1a4b01",
+        "hash": "ad115bf6428827287c4f4d260c0ff563295d612a0bf24aefe923b167572a3417"
+    },
+    {
+        "index": 2,
+        "timestamp": 1764270992.4222858,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "ad115bf6428827287c4f4d260c0ff563295d612a0bf24aefe923b167572a3417",
+        "hash": "6cefb028e7f6e61c306b3c858ce9a10e8b10ca44f46ad72f7302af7a13254383"
+    },
+    {
+        "index": 3,
+        "timestamp": 1764271060.9251533,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "6cefb028e7f6e61c306b3c858ce9a10e8b10ca44f46ad72f7302af7a13254383",
+        "hash": "1f4ffff2d861a415e3f2f4b16e041ff81ffc6f442fb7ceb572a3184b0b5a0497"
+    },
+    {
+        "index": 4,
+        "timestamp": 1764271071.2562687,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "1f4ffff2d861a415e3f2f4b16e041ff81ffc6f442fb7ceb572a3184b0b5a0497",
+        "hash": "a2db5484bfe29380bf101858faba95b99e83e529f0031a717c6feb50442c7a27"
+    },
+    {
+        "index": 5,
+        "timestamp": 1764271072.762554,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "a2db5484bfe29380bf101858faba95b99e83e529f0031a717c6feb50442c7a27",
+        "hash": "4228b08b9f5f9033f5639c9ade3f7fb6f447dfb8c595d24f4ed29ad045fe8aec"
+    },
+    {
+        "index": 6,
+        "timestamp": 1764271073.5877569,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "4228b08b9f5f9033f5639c9ade3f7fb6f447dfb8c595d24f4ed29ad045fe8aec",
+        "hash": "d7b6b029d3ed7d2838c39e94e758cef5b58afa8e6f87aa43b6ded1e4e33cebe6"
+    },
+    {
+        "index": 7,
+        "timestamp": 1764271073.8325138,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "d7b6b029d3ed7d2838c39e94e758cef5b58afa8e6f87aa43b6ded1e4e33cebe6",
+        "hash": "849f10274b08e6aba92b795fe4afa645a46199811c59252f6f477737e41b909b"
+    },
+    {
+        "index": 8,
+        "timestamp": 1764271074.0856764,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "849f10274b08e6aba92b795fe4afa645a46199811c59252f6f477737e41b909b",
+        "hash": "901ccaf07db6d5226bf6497f4e7aeaa5f89e016402f2565e14c5943fa786fa2b"
+    },
+    {
+        "index": 9,
+        "timestamp": 1764271074.325086,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "901ccaf07db6d5226bf6497f4e7aeaa5f89e016402f2565e14c5943fa786fa2b",
+        "hash": "babe7e456f6a90545b6692766af45b00fa125c3c347851f8754ad05fb23ab1d5"
+    },
+    {
+        "index": 10,
+        "timestamp": 1764271074.5389109,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "babe7e456f6a90545b6692766af45b00fa125c3c347851f8754ad05fb23ab1d5",
+        "hash": "ad050797319b47e34fea38b3fd7d180e248150f48a47e3dfafa2df19a4f2aa2d"
+    },
+    {
+        "index": 11,
+        "timestamp": 1764271074.7652602,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "ad050797319b47e34fea38b3fd7d180e248150f48a47e3dfafa2df19a4f2aa2d",
+        "hash": "4b84df835039c3052bb5b1d4b6091e9a4904fd4702ff1d456aca26df7a6b4404"
+    },
+    {
+        "index": 12,
+        "timestamp": 1764271074.997565,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "4b84df835039c3052bb5b1d4b6091e9a4904fd4702ff1d456aca26df7a6b4404",
+        "hash": "ea7ca60bca365544c382a4128d094aa76584b3e61ee21b338c77ff4fc7d57726"
+    },
+    {
+        "index": 13,
+        "timestamp": 1764271075.2096324,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "ea7ca60bca365544c382a4128d094aa76584b3e61ee21b338c77ff4fc7d57726",
+        "hash": "3a1cb337a11e0333f59acac0cd9001f984c0e09750e38142ab3ff91b992771e6"
+    },
+    {
+        "index": 14,
+        "timestamp": 1764271075.4344778,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "3a1cb337a11e0333f59acac0cd9001f984c0e09750e38142ab3ff91b992771e6",
+        "hash": "e51e580d7e57da2d1341d11de61806bd0a6c95774e4e563ca30954c9d6edfed6"
+    },
+    {
+        "index": 15,
+        "timestamp": 1764396212.666294,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "e51e580d7e57da2d1341d11de61806bd0a6c95774e4e563ca30954c9d6edfed6",
+        "hash": "e8b6c2419f87ee9af46f0fe7d1309429ff1dc7952a987bd3db6e8c68bc1f5263"
+    },
+    {
+        "index": 16,
+        "timestamp": 1764397581.779513,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Ibuprofen"
+            ],
+            "interaction_count": 3,
+            "global_risk": 1.0
+        },
+        "previous_hash": "e8b6c2419f87ee9af46f0fe7d1309429ff1dc7952a987bd3db6e8c68bc1f5263",
+        "hash": "b417b150f65647ec61204cbceb7c3362ab86734eca78199a4389279d25e698d1"
+    },
+    {
+        "index": 17,
+        "timestamp": 1764397581.9297736,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "b417b150f65647ec61204cbceb7c3362ab86734eca78199a4389279d25e698d1",
+        "hash": "ac15f349e8abb35f09f94d6da67db3dac0422499b68b08aa2ba24a0052e2c307"
+    },
+    {
+        "index": 18,
+        "timestamp": 1764397665.7234774,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "ac15f349e8abb35f09f94d6da67db3dac0422499b68b08aa2ba24a0052e2c307",
+        "hash": "41a197809e32731484471dec38deac6e5cade17d97cdc85acd2df44f70320766"
+    },
+    {
+        "index": 19,
+        "timestamp": 1764397666.9831343,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "monocef"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "41a197809e32731484471dec38deac6e5cade17d97cdc85acd2df44f70320766",
+        "hash": "6a0befe2804bb670fd85a300e094a83816ea06b76f84e9b19ea14e901c6348df"
+    },
+    {
+        "index": 20,
+        "timestamp": 1764397689.859802,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "6a0befe2804bb670fd85a300e094a83816ea06b76f84e9b19ea14e901c6348df",
+        "hash": "42877c4ef022ea5f77b89adb8545f915215cdd9797c3df4f161c9427711d6594"
+    },
+    {
+        "index": 21,
+        "timestamp": 1764397692.728557,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "42877c4ef022ea5f77b89adb8545f915215cdd9797c3df4f161c9427711d6594",
+        "hash": "f5e77a16f3771150499313a6c5ea766e5d28b95c40dc606e863092def7c728f7"
+    },
+    {
+        "index": 22,
+        "timestamp": 1764397695.4102905,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "f5e77a16f3771150499313a6c5ea766e5d28b95c40dc606e863092def7c728f7",
+        "hash": "3a618281a1738c8177fb37e82d5e12ee84a35b714690d15b1868d12183a186fc"
+    },
+    {
+        "index": 23,
+        "timestamp": 1764397696.1523595,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "3a618281a1738c8177fb37e82d5e12ee84a35b714690d15b1868d12183a186fc",
+        "hash": "fd8285f5cab3c06bece8de4a5fc5120917d6e70656a24b3d2d440900e453b8c3"
+    },
+    {
+        "index": 24,
+        "timestamp": 1764397699.801258,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "fd8285f5cab3c06bece8de4a5fc5120917d6e70656a24b3d2d440900e453b8c3",
+        "hash": "bfd057c92cc7e1b020fc7619f3a359633cf465de8aa44e1523ee6a9c834ac05f"
+    },
+    {
+        "index": 25,
+        "timestamp": 1764397700.473441,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "bfd057c92cc7e1b020fc7619f3a359633cf465de8aa44e1523ee6a9c834ac05f",
+        "hash": "e43d5f6a6558727b8069f552936d8a2dcc83a2b4bd7f5431a2a0bff635b708cf"
+    },
+    {
+        "index": 26,
+        "timestamp": 1764397700.7128513,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "e43d5f6a6558727b8069f552936d8a2dcc83a2b4bd7f5431a2a0bff635b708cf",
+        "hash": "3317ae7d2db35f4b9521e77284ea28ad6af41965eb1a65f91c7c85b6ed6f4970"
+    },
+    {
+        "index": 27,
+        "timestamp": 1764397700.9445903,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "3317ae7d2db35f4b9521e77284ea28ad6af41965eb1a65f91c7c85b6ed6f4970",
+        "hash": "c8780c28c7b4785b5896bcd44f070ef53093b1c6aff9ceceef31d0e4147cdb45"
+    },
+    {
+        "index": 28,
+        "timestamp": 1764397701.1680238,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.0
+        },
+        "previous_hash": "c8780c28c7b4785b5896bcd44f070ef53093b1c6aff9ceceef31d0e4147cdb45",
+        "hash": "9b000be43745b7fb2828093421cf92c367a0dbeb348d27404257c11467ad0a29"
+    },
+    {
+        "index": 29,
+        "timestamp": 1764399410.3401606,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromicin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "9b000be43745b7fb2828093421cf92c367a0dbeb348d27404257c11467ad0a29",
+        "hash": "8ec32dab62dd34c75cd9686872fc696b43cb60d1458159769c853b810afda696"
+    },
+    {
+        "index": 30,
+        "timestamp": 1764399560.180389,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromycin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "8ec32dab62dd34c75cd9686872fc696b43cb60d1458159769c853b810afda696",
+        "hash": "e2fc678bbb69bc3ededf385985f37b56e8aea5c768aabdbcd12d3a007019b776"
+    },
+    {
+        "index": 31,
+        "timestamp": 1764399602.115339,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 1.0
+        },
+        "previous_hash": "e2fc678bbb69bc3ededf385985f37b56e8aea5c768aabdbcd12d3a007019b776",
+        "hash": "4e35c09dea017b7a6bc694d010c0107df287bf4eebac85207eab626b33b0d35b"
+    },
+    {
+        "index": 32,
+        "timestamp": 1764399644.0610294,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromicin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "4e35c09dea017b7a6bc694d010c0107df287bf4eebac85207eab626b33b0d35b",
+        "hash": "c01a5ae7fd3aa466fea7551a7743d6db25555179973e4481a0addea7e9666c7f"
+    },
+    {
+        "index": 33,
+        "timestamp": 1764399644.9046345,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromicin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "c01a5ae7fd3aa466fea7551a7743d6db25555179973e4481a0addea7e9666c7f",
+        "hash": "5f8f3f281fa0671ead973b4183c383b0bb08c9157cb964889c628dfd2c00cf8a"
+    },
+    {
+        "index": 34,
+        "timestamp": 1764399645.3771286,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromicin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "5f8f3f281fa0671ead973b4183c383b0bb08c9157cb964889c628dfd2c00cf8a",
+        "hash": "394be22e8f2e91b36ff7acde1c31534e59e504439633226bffda2b9408742254"
+    },
+    {
+        "index": 35,
+        "timestamp": 1764399647.3347795,
+        "data": {
+            "drugs": [
+                "monocef",
+                "Erithromicin",
+                "Aspirin"
+            ],
+            "interaction_count": 0,
+            "global_risk": 0.3
+        },
+        "previous_hash": "394be22e8f2e91b36ff7acde1c31534e59e504439633226bffda2b9408742254",
+        "hash": "e806127bacfcc0781f6ae3f8aae44a81bd6005a2fee12d9f570432303f219acb"
+    },
+    {
+        "index": 36,
+        "timestamp": 1764401575.0206335,
+        "data": {
+            "drugs": [
+                "monocef",
+                "paracetamol",
+                "Dolo 650"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "e806127bacfcc0781f6ae3f8aae44a81bd6005a2fee12d9f570432303f219acb",
+        "hash": "f540448cad8384e303bc0b6cce3a496ff4b82865d10fb516fa22629db1953c86"
+    },
+    {
+        "index": 37,
+        "timestamp": 1764402417.786228,
+        "data": {
+            "drugs": [
+                "monocef",
+                "paracetamol",
+                "Dolo 650"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "f540448cad8384e303bc0b6cce3a496ff4b82865d10fb516fa22629db1953c86",
+        "hash": "6a1b67286ba7d9136529552917c1c3bbec80167cc027e83d66e162263c666721"
+    },
+    {
+        "index": 38,
+        "timestamp": 1764402487.1146765,
+        "data": {
+            "drugs": [
+                "paracetamol",
+                "Dolo 650"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "6a1b67286ba7d9136529552917c1c3bbec80167cc027e83d66e162263c666721",
+        "hash": "fb62e8875a60814ae7231da3282eba9bb2d3374e3e7cffc44c9010026e87f8ad"
+    },
+    {
+        "index": 39,
+        "timestamp": 1764402876.7390754,
+        "data": {
+            "drugs": [
+                "paracetamol",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "fb62e8875a60814ae7231da3282eba9bb2d3374e3e7cffc44c9010026e87f8ad",
+        "hash": "f112ace06a05e31f6dabc862658cf7dd7ffa40cdf512c7698f25d6cc1601c223"
+    },
+    {
+        "index": 40,
+        "timestamp": 1764403751.598521,
+        "data": {
+            "drugs": [
+                "paracetamol",
+                "Dolo 650",
+                "Erithromicin"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "f112ace06a05e31f6dabc862658cf7dd7ffa40cdf512c7698f25d6cc1601c223",
+        "hash": "b5492b341c824a4779f731a7f22ab0934f758bc88dedb3c435055b5995c5712f"
+    },
+    {
+        "index": 41,
+        "timestamp": 1764420893.5344942,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "b5492b341c824a4779f731a7f22ab0934f758bc88dedb3c435055b5995c5712f",
+        "hash": "f3acc0e6dfdbc12cd4a7c32ac791befa8d815cc28ba6be2e194f7b7bb968d6fd"
+    },
+    {
+        "index": 42,
+        "timestamp": 1764420944.8426952,
+        "data": {
+            "drugs": [
+                "Dolo 650",
+                "Monocef",
+                "Erithromicin"
+            ],
+            "interaction_count": 3,
+            "global_risk": 1.0
+        },
+        "previous_hash": "f3acc0e6dfdbc12cd4a7c32ac791befa8d815cc28ba6be2e194f7b7bb968d6fd",
+        "hash": "7af4213c34d1915b504c5c0f43877b1b300bb8757ba0cf93bed45322cc35c764"
+    },
+    {
+        "index": 43,
+        "timestamp": 1764421067.3912363,
+        "data": {
+            "drugs": [
+                "warfarin",
+                "Aspirin",
+                "ibuprofen"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "7af4213c34d1915b504c5c0f43877b1b300bb8757ba0cf93bed45322cc35c764",
+        "hash": "bb0668a3eafd6eb1b3f49e513121bf97c9ce4ce1d391be6d0611f1cda1619e0a"
+    },
+    {
+        "index": 44,
+        "timestamp": 1764421069.7457407,
+        "data": {
+            "drugs": [
+                "warfarin",
+                "Aspirin",
+                "ibuprofen"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "bb0668a3eafd6eb1b3f49e513121bf97c9ce4ce1d391be6d0611f1cda1619e0a",
+        "hash": "6a359b12f19cbb389d02764a82ddb592ba9c2e5579ff21bdf2be19d522d73260"
+    },
+    {
+        "index": 45,
+        "timestamp": 1764421071.5048687,
+        "data": {
+            "drugs": [
+                "warfarin",
+                "Aspirin",
+                "ibuprofen"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "6a359b12f19cbb389d02764a82ddb592ba9c2e5579ff21bdf2be19d522d73260",
+        "hash": "d8b66f6c82d748fd3f7cfae1e241d0b241e65dee503633a21c60c50537d3cb31"
+    },
+    {
+        "index": 46,
+        "timestamp": 1764421116.0814028,
+        "data": {
+            "drugs": [
+                "Amlodipine",
+                " Lisinopril",
+                " Losartan"
+            ],
+            "interaction_count": 3,
+            "global_risk": 1.0
+        },
+        "previous_hash": "d8b66f6c82d748fd3f7cfae1e241d0b241e65dee503633a21c60c50537d3cb31",
+        "hash": "172590256731187a2186f35971de78922e36c8804c5f243df6b8fac9f210d9c3"
+    },
+    {
+        "index": 47,
+        "timestamp": 1764422194.6648102,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "172590256731187a2186f35971de78922e36c8804c5f243df6b8fac9f210d9c3",
+        "hash": "f5d046742d3ae3d280fc4d48895c78b7ea7c41dd0bec85fddb52221cfb0eee2c"
+    },
+    {
+        "index": 48,
+        "timestamp": 1764422368.739578,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "f5d046742d3ae3d280fc4d48895c78b7ea7c41dd0bec85fddb52221cfb0eee2c",
+        "hash": "8e6af010eda35867605f0f319ea4342650ccd6abe2a8ce166df4b8b12b0a58c7"
+    },
+    {
+        "index": 49,
+        "timestamp": 1764425483.320696,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "8e6af010eda35867605f0f319ea4342650ccd6abe2a8ce166df4b8b12b0a58c7",
+        "hash": "c991244c138ba82532f67ea971671127b324947281796769d727ceb059a3bc9c"
+    },
+    {
+        "index": 50,
+        "timestamp": 1764425591.3206065,
+        "data": {
+            "drugs": [
+                "Erithromycin",
+                "Dolo 650",
+                "Pantacid"
+            ],
+            "interaction_count": 3,
+            "global_risk": 0.65
+        },
+        "previous_hash": "c991244c138ba82532f67ea971671127b324947281796769d727ceb059a3bc9c",
+        "hash": "b1f4aeeffe3eea82b716b963d353e787833a21c348c1304bc5fa415fbf1778a4"
+    },
+    {
+        "index": 51,
+        "timestamp": 1764425622.2321887,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "b1f4aeeffe3eea82b716b963d353e787833a21c348c1304bc5fa415fbf1778a4",
+        "hash": "21839cbb611efbfd63be847bf3784a1c5fa09cfa09a8a65cbb31f4a367b6b980"
+    },
+    {
+        "index": 52,
+        "timestamp": 1764425728.091471,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "21839cbb611efbfd63be847bf3784a1c5fa09cfa09a8a65cbb31f4a367b6b980",
+        "hash": "9af2bab48a863cd55a50fc97afdbe8aac5fffec54e085f12cde3da597b2f84ae"
+    },
+    {
+        "index": 53,
+        "timestamp": 1764425765.4880142,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "9af2bab48a863cd55a50fc97afdbe8aac5fffec54e085f12cde3da597b2f84ae",
+        "hash": "8fe99a10ca1a8365a22b290b59e5a01a5678a4f4c3ee4a36aae8394d66271553"
+    },
+    {
+        "index": 54,
+        "timestamp": 1764425847.1280015,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "8fe99a10ca1a8365a22b290b59e5a01a5678a4f4c3ee4a36aae8394d66271553",
+        "hash": "6c0a8103dc4d6fcf7d804ecacf9a2a3f05ffe5bca62f4e296241210e976c186d"
+    },
+    {
+        "index": 55,
+        "timestamp": 1764425867.3503768,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "6c0a8103dc4d6fcf7d804ecacf9a2a3f05ffe5bca62f4e296241210e976c186d",
+        "hash": "0af01595554480dcbcebfe1052edbf57eea530ec4456b85357574217a24894fb"
+    },
+    {
+        "index": 56,
+        "timestamp": 1764425897.5043874,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "0af01595554480dcbcebfe1052edbf57eea530ec4456b85357574217a24894fb",
+        "hash": "3e2ea5a913728f2f21fbded4562c60fe9a97a270c95b1bdbda8136e3ec48258f"
+    },
+    {
+        "index": 57,
+        "timestamp": 1764425954.9994624,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "3e2ea5a913728f2f21fbded4562c60fe9a97a270c95b1bdbda8136e3ec48258f",
+        "hash": "6889f1abe29c5227c4a671575b31000ac8f2f4eaae486778718ae3ae39a9a040"
+    },
+    {
+        "index": 58,
+        "timestamp": 1764426237.4702623,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "6889f1abe29c5227c4a671575b31000ac8f2f4eaae486778718ae3ae39a9a040",
+        "hash": "0f5bcafcfb3f634072b9a0377a8fd48cfa686abaa6c318ba5106d6450d793744"
+    },
+    {
+        "index": 59,
+        "timestamp": 1764426304.370616,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "0f5bcafcfb3f634072b9a0377a8fd48cfa686abaa6c318ba5106d6450d793744",
+        "hash": "eab2089bd9df4b7740c7ee04b1f5d85373e8905ed3fc8dfb066a1d804446df61"
+    },
+    {
+        "index": 60,
+        "timestamp": 1764426403.7871988,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "eab2089bd9df4b7740c7ee04b1f5d85373e8905ed3fc8dfb066a1d804446df61",
+        "hash": "64e9806eda9e6cf605c9cf2b1494ddb29559604e4b858844bec5a77d25f063d3"
+    },
+    {
+        "index": 61,
+        "timestamp": 1764426738.441977,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "64e9806eda9e6cf605c9cf2b1494ddb29559604e4b858844bec5a77d25f063d3",
+        "hash": "47ab3c0fc788433f6b41041bb9bdebd0ba412f74e3d43a37e5f7008cc78655f1"
+    },
+    {
+        "index": 62,
+        "timestamp": 1764426876.101942,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "47ab3c0fc788433f6b41041bb9bdebd0ba412f74e3d43a37e5f7008cc78655f1",
+        "hash": "e7ad612648aad237971a77e4c8ccc338b596064c243db4e904d1f12687e87011"
+    },
+    {
+        "index": 63,
+        "timestamp": 1764427402.1547172,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "e7ad612648aad237971a77e4c8ccc338b596064c243db4e904d1f12687e87011",
+        "hash": "afc4dfd975e060159b94bda87a0acea9350484dc3b121ecfc9ee64037da7f339"
+    },
+    {
+        "index": 64,
+        "timestamp": 1764427637.0132434,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "afc4dfd975e060159b94bda87a0acea9350484dc3b121ecfc9ee64037da7f339",
+        "hash": "7cf07ecc5e83af0661815e0cdb24a3e75da96b548c4bdf53e69744ff5bdaa110"
+    },
+    {
+        "index": 65,
+        "timestamp": 1764428497.6372626,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "7cf07ecc5e83af0661815e0cdb24a3e75da96b548c4bdf53e69744ff5bdaa110",
+        "hash": "0d303ff19387818e4379bd7d48b0cc49ba65e36e99734ba4bc8a7beb908564c5"
+    },
+    {
+        "index": 66,
+        "timestamp": 1764434449.3097024,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "0d303ff19387818e4379bd7d48b0cc49ba65e36e99734ba4bc8a7beb908564c5",
+        "hash": "262fc0e34aa12d322f63025d54170c19f169053f8ea2b406095869c26e35ca12"
+    },
+    {
+        "index": 67,
+        "timestamp": 1764436107.3707337,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "262fc0e34aa12d322f63025d54170c19f169053f8ea2b406095869c26e35ca12",
+        "hash": "589006d2caae8c74347dee8fe927ae1787cd9ff66f28337617d813734cc3a9a0"
+    },
+    {
+        "index": 68,
+        "timestamp": 1764436673.1981392,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "589006d2caae8c74347dee8fe927ae1787cd9ff66f28337617d813734cc3a9a0",
+        "hash": "3ea4ec421d8c0fb7d9a5167cb14d046e46733ed4e4f0a5806420622ceaf91a14"
+    },
+    {
+        "index": 69,
+        "timestamp": 1764436743.8142662,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "3ea4ec421d8c0fb7d9a5167cb14d046e46733ed4e4f0a5806420622ceaf91a14",
+        "hash": "819f709fe4a81369339e82bb39ff97018b9bd983f814444aa1519e1ccd81c2fe"
+    },
+    {
+        "index": 70,
+        "timestamp": 1764437283.9481761,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "819f709fe4a81369339e82bb39ff97018b9bd983f814444aa1519e1ccd81c2fe",
+        "hash": "4a4884cf17e589d39c1dd191e2e4283e5581d5f0da33b3018a274dd17a56d568"
+    },
+    {
+        "index": 71,
+        "timestamp": 1764437605.7206714,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "4a4884cf17e589d39c1dd191e2e4283e5581d5f0da33b3018a274dd17a56d568",
+        "hash": "7e825ccd4c5c370dda9506d3450e34d0a40df5d08a5221a661c54b54ce55d539"
+    },
+    {
+        "index": 72,
+        "timestamp": 1764437611.2674277,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Amoxicillin",
+                "Ibuprofen"
+            ],
+            "interaction_count": 6,
+            "global_risk": 1.0
+        },
+        "previous_hash": "7e825ccd4c5c370dda9506d3450e34d0a40df5d08a5221a661c54b54ce55d539",
+        "hash": "e8150da3f4892d48648cabf6ad514a927a913a9c9e23cc8d03714e7b0ba870ee"
+    },
+    {
+        "index": 73,
+        "timestamp": 1764438056.565638,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "e8150da3f4892d48648cabf6ad514a927a913a9c9e23cc8d03714e7b0ba870ee",
+        "hash": "1338a57c629042a97734043d737174b4cd8280466a5cfb5516c6d6b0dc34a465"
+    },
+    {
+        "index": 74,
+        "timestamp": 1764438112.8891203,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Amoxicillin",
+                "Ibuprofen"
+            ],
+            "interaction_count": 6,
+            "global_risk": 1.0
+        },
+        "previous_hash": "1338a57c629042a97734043d737174b4cd8280466a5cfb5516c6d6b0dc34a465",
+        "hash": "c2f4fa4e35204ec223181fa61b068dcec9e46de493c87067cb060efbf5c823f5"
+    },
+    {
+        "index": 75,
+        "timestamp": 1764440843.3612635,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Paracetamol",
+                "Monocef"
+            ],
+            "interaction_count": 5,
+            "global_risk": 0.65
+        },
+        "previous_hash": "c2f4fa4e35204ec223181fa61b068dcec9e46de493c87067cb060efbf5c823f5",
+        "hash": "e46867e8672ed087efb8fa221b452087192e160ad7b14491c660e43624f2e9e0"
+    },
+    {
+        "index": 76,
+        "timestamp": 1764440865.0752354,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Paracetamol",
+                "Monocef"
+            ],
+            "interaction_count": 5,
+            "global_risk": 0.65
+        },
+        "previous_hash": "e46867e8672ed087efb8fa221b452087192e160ad7b14491c660e43624f2e9e0",
+        "hash": "3b82fa64fb55f4819e9671826f213720058eb4f86510ad6baf069b48ab47e93a"
+    },
+    {
+        "index": 77,
+        "timestamp": 1764440998.8597252,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "Paracetamol",
+                "Monocef",
+                "Amoxicillin",
+                "Ibuprofen"
+            ],
+            "interaction_count": 14,
+            "global_risk": 1.0
+        },
+        "previous_hash": "3b82fa64fb55f4819e9671826f213720058eb4f86510ad6baf069b48ab47e93a",
+        "hash": "9cd5b65c331d6a782bf68510a0a895b2f9b7e2222917fcbc92e7ddf5d1b7711d"
+    }
+]
