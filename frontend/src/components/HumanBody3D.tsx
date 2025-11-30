@@ -354,7 +354,7 @@ export function HumanBodyScene({
                     geometry={organGeometries.brain}
                     baseColor="#fca5a5"
                     severity={organImpact.brain}
-                    onClick={Object.assign(() => onOrganClick?.('brain'), { symptoms: organImpact.brain_symptoms || [] })}
+                    onClick={() => onOrganClick?.('brain')}
                     selected={selectedOrgan === 'brain'}
                     onSelect={handleOrganSelect}
                 />

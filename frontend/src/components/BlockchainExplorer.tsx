@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Shield, Link as LinkIcon, CheckCircle, Clock } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Shield, CheckCircle, Clock } from 'lucide-react';
 import axios from 'axios';
 
 const API_URL = 'http://127.0.0.1:8000/api';
@@ -10,7 +10,6 @@ interface BlockchainExplorerProps {
 
 export default function BlockchainExplorer({ refreshTrigger = 0 }: BlockchainExplorerProps) {
     const [chain, setChain] = useState<any[]>([]);
-    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetchChain();

@@ -16,7 +16,7 @@ export default function ChatPanel({ context, onPrescriptionUpload }: any) {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const [location, setLocation] = useState<any>(null);
-    const [locationLoading, setLocationLoading] = useState(true);
+    const [, setLocationLoading] = useState(true);
     const [locationError, setLocationError] = useState<string | null>(null);
 
     useEffect(() => {

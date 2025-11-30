@@ -1138,5 +1138,53 @@
         },
         "previous_hash": "3b82fa64fb55f4819e9671826f213720058eb4f86510ad6baf069b48ab47e93a",
         "hash": "9cd5b65c331d6a782bf68510a0a895b2f9b7e2222917fcbc92e7ddf5d1b7711d"
+    },
+    {
+        "index": 78,
+        "timestamp": 1764478636.1231081,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin"
+            ],
+            "interaction_count": 1,
+            "global_risk": 0.65
+        },
+        "previous_hash": "9cd5b65c331d6a782bf68510a0a895b2f9b7e2222917fcbc92e7ddf5d1b7711d",
+        "hash": "d14e1473ffdcf65cd36c33e3f02cd123014505765b0b4bac085aba98e135cff6"
+    },
+    {
+        "index": 79,
+        "timestamp": 1764479004.7608745,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "paracetamol",
+                "Dolo 650"
+            ],
+            "interaction_count": 4,
+            "global_risk": 0.65
+        },
+        "previous_hash": "d14e1473ffdcf65cd36c33e3f02cd123014505765b0b4bac085aba98e135cff6",
+        "hash": "0b4c1ce094f82df075a75cdd35378d190fc377a798313d5bc8fa1c44f954d04b"
+    },
+    {
+        "index": 80,
+        "timestamp": 1764479160.1912878,
+        "data": {
+            "drugs": [
+                "Warfarin",
+                "Aspirin",
+                "paracetamol",
+                "Dolo 650",
+                "Amoxicillin",
+                "Ibuprofen"
+            ],
+            "interaction_count": 13,
+            "global_risk": 1.0
+        },
+        "previous_hash": "0b4c1ce094f82df075a75cdd35378d190fc377a798313d5bc8fa1c44f954d04b",
+        "hash": "6578bb0bb796c9caa67c803c71a91c72f831091575e424f070e310c03b48add6"
     }
 ]

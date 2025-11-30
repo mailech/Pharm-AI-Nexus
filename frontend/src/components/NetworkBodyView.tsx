@@ -167,7 +167,7 @@ function CameraController({ target, distance }: { target: [number, number, numbe
         return () => clearTimeout(timer);
     }, [target, distance]);
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         if (!isAnimating.current) return;
 
         // Smooth camera transition
