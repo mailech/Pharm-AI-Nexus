@@ -69,4 +69,6 @@ npm run dev
 
 ---
 *Deployment-Link: (https://pharm-nexus.netlify.app/)*
+
+---
 *Built for Major Hackathon Demo*
