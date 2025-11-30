@@ -1,6 +1,7 @@
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
 python-multipart==0.0.6
+pandas==2.1.4
 networkx==2.8.8
 node2vec==0.4.6
 scikit-learn==1.4.0
