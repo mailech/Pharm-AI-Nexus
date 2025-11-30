@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/api';
+const API_URL = 'https://pharmnexus.onrender.com/api';
 
 export const checkInteractions = async (drugs: string[]) => {
     const response = await axios.post(`${API_URL}/check_interactions`, { drugs });
@@ -25,7 +25,7 @@ export const connectAgentWebSocket = (
     onMessage: (data: any) => void,
     onError: (error: any) => void
 ) => {
-    const ws = new WebSocket('ws://127.0.0.1:8000/agent/ws');
+    const ws = new WebSocket('wss://pharmnexus.onrender.com/agent/ws');
 
     ws.onopen = () => {
         console.log('WebSocket connected');
