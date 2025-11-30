@@ -87,10 +87,12 @@ export default function Dashboard() {
         return () => window.removeEventListener('keydown', handleKeyPress);
     }, [drugs, loading, analysis]);
 
+    const [mobileTab, setMobileTab] = useState<'controls' | 'view' | 'details'>('view');
+
     return (
-        <div className="flex h-screen bg-slate-950 text-slate-200 overflow-hidden font-sans">
+        <div className="flex flex-col md:flex-row h-[100dvh] bg-slate-950 text-slate-200 overflow-hidden font-sans">
             {/* Left Panel: Controls */}
-            <div className="w-80 flex flex-col border-r border-slate-800 bg-slate-900/50 p-4 gap-6 z-10">
+            <div className={`${mobileTab === 'controls' ? 'flex' : 'hidden'} md:flex w-full md:w-80 flex-col border-r border-slate-800 bg-slate-900/50 p-4 gap-6 z-10 overflow-y-auto md:overflow-visible`}>
                 <div>
                     <h1 className="text-2xl font-bold text-teal-400 flex items-center gap-2 mb-1">
                         <Activity className="animate-pulse" /> PharmAI Nexus
@@ -119,7 +121,7 @@ export default function Dashboard() {
                             ))}
                         </div>
 
-                        <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
+                        <div className="bg-slate-800 p-3 rounded-lg border border-slate-700 mt-4">
                             <label className="text-xs font-semibold text-slate-400 mb-2 block">PATIENT PROFILE</label>
                             <div className="flex gap-2">
                                 <button
@@ -139,7 +141,10 @@ export default function Dashboard() {
                     </div>
 
                     <button
-                        onClick={runAnalysis}
+                        onClick={() => {
+                            runAnalysis();
+                            if (window.innerWidth < 768) setMobileTab('view');
+                        }}
                         disabled={loading || drugs.length < 2}
                         className="w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-bold py-3 rounded-lg shadow-lg shadow-teal-900/20 transition-all flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
@@ -157,7 +162,7 @@ export default function Dashboard() {
                 </div>
 
                 {analysis && (
-                    <div className="flex-1 overflow-y-auto space-y-3 pr-1 custom-scrollbar">
+                    <div className="flex-1 overflow-y-auto space-y-3 pr-1 custom-scrollbar pb-20 md:pb-0">
                         <div className="text-xs font-semibold text-slate-400">DETECTED INTERACTIONS</div>
                         {analysis.drug_interactions && analysis.drug_interactions.map((inter: any, i: number) => {
                             const severityColor = inter.severity > 0.7 ? 'text-red-400' : inter.severity > 0.4 ? 'text-yellow-400' : 'text-green-400';
@@ -182,170 +187,172 @@ export default function Dashboard() {
             </div>
 
             {/* Center: 3D Visualization */}
-            <div className="flex-1 relative bg-gradient-to-b from-slate-900 to-slate-950">
-                <div className="absolute inset-0">
-                    {centerViewMode === 'body' ? (
-                        <>
-                            <Canvas camera={{ position: [0, 1.0, 5], fov: 50 }}>
-                                <color attach="background" args={['#020617']} />
-                                <HumanBodyScene
-                                    bodyType={gender}
-                                    organImpact={(() => {
-                                        const impacts = analysis?.region_impacts || analysis?.organ_impacts || {};
-                                        // Normalize: extract severity and symptoms from dict values
-                                        const normalized: any = {};
-                                        for (const [region, value] of Object.entries(impacts)) {
-                                            if (typeof value === 'object' && value !== null && 'severity' in value) {
-                                                normalized[region] = (value as any).severity;
-                                                // Store symptoms separately for tooltip access
-                                                (normalized as any)[`${region}_symptoms`] = (value as any).symptoms || [];
-                                            } else {
-                                                normalized[region] = value;
+            <div className={`${mobileTab === 'view' ? 'flex' : 'hidden'} md:flex flex-1 relative bg-gradient-to-b from-slate-900 to-slate-950 flex-col`}>
+                <div className="flex-1 relative">
+                    <div className="absolute inset-0">
+                        {centerViewMode === 'body' ? (
+                            <>
+                                <Canvas camera={{ position: [0, 1.0, 5], fov: 50 }}>
+                                    <color attach="background" args={['#020617']} />
+                                    <HumanBodyScene
+                                        bodyType={gender}
+                                        organImpact={(() => {
+                                            const impacts = analysis?.region_impacts || analysis?.organ_impacts || {};
+                                            // Normalize: extract severity and symptoms from dict values
+                                            const normalized: any = {};
+                                            for (const [region, value] of Object.entries(impacts)) {
+                                                if (typeof value === 'object' && value !== null && 'severity' in value) {
+                                                    normalized[region] = (value as any).severity;
+                                                    // Store symptoms separately for tooltip access
+                                                    (normalized as any)[`${region}_symptoms`] = (value as any).symptoms || [];
+                                                } else {
+                                                    normalized[region] = value;
+                                                }
                                             }
-                                        }
-                                        return normalized;
-                                    })()}
-                                    onOrganClick={(organ) => setSelectedOrgan(organ)}
-                                    bodyOpacity={0.15}
-                                />
-                                {/* Interactive Controls */}
-                                <OrbitControls
-                                    target={[0, 1.0, 0]}
-                                    enablePan={true}
-                                    enableZoom={true}
-                                    enableRotate={true}
-                                    minDistance={2}
-                                    maxDistance={8}
-                                    maxPolarAngle={Math.PI / 1.5}
-                                    minPolarAngle={Math.PI / 4}
-                                />
-                            </Canvas>
-
-                            {/* Tooltip for hovered organ */}
-                            {selectedOrgan && (
-                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-sm border border-teal-500/50 px-4 py-2 rounded-lg pointer-events-none">
-                                    <p className="text-teal-400 font-bold text-sm capitalize">
-                                        {selectedOrgan.replace('_', ' ')}
-                                    </p>
-                                </div>
-                            )}
-
-                            {/* Risk Mitigation Card */}
-                            {analysis && (
-                                <div className="absolute bottom-4 left-4 w-64 bg-slate-900/90 backdrop-blur border border-red-500/30 rounded-lg p-3 shadow-lg pointer-events-auto">
-                                    <div className="flex items-center gap-2 mb-2 border-b border-slate-700 pb-2">
-                                        <Shield size={16} className="text-red-400" />
-                                        <h3 className="text-xs font-bold text-slate-200">KEY RISKS & MITIGATION</h3>
-                                    </div>
-                                    <div className="space-y-3 max-h-60 overflow-y-auto custom-scrollbar">
-                                        {(() => {
-                                            const impacts = analysis.region_impacts || analysis.organ_impacts || {};
-                                            const highRiskOrgans = Object.entries(impacts)
-                                                .map(([name, data]: [string, any]) => ({
-                                                    name,
-                                                    severity: typeof data === 'object' ? data.severity : data,
-                                                    symptoms: typeof data === 'object' ? data.symptoms : []
-                                                }))
-                                                .filter(o => o.severity >= 0.5)
-                                                .sort((a, b) => b.severity - a.severity)
-                                                .slice(0, 3);
-
-                                            if (highRiskOrgans.length === 0) {
-                                                return <p className="text-[10px] text-slate-400">No high-risk organs detected.</p>;
-                                            }
-
-                                            const riskMap: any = {
-                                                liver: { risk: "Liver strain/enzyme elevation", mitigation: "Avoid alcohol, limit acetaminophen." },
-                                                kidneys: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
-                                                kidney_left: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
-                                                kidney_right: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
-                                                stomach: { risk: "Ulcers or GI bleeding", mitigation: "Take with food, avoid NSAIDs." },
-                                                heart: { risk: "Rhythm or BP issues", mitigation: "Monitor pulse/BP regularly." },
-                                                brain: { risk: "Dizziness or confusion", mitigation: "Avoid driving if dizzy." },
-                                                lungs: { risk: "Respiratory depression", mitigation: "Monitor breathing rate." }
-                                            };
-
-                                            return highRiskOrgans.map((organ, i) => {
-                                                const info = riskMap[organ.name.toLowerCase()] || { risk: "General organ stress", mitigation: "Monitor for symptoms." };
-                                                return (
-                                                    <div key={i} className="text-xs">
-                                                        <div className="flex justify-between text-red-300 font-semibold">
-                                                            <span className="capitalize">{organ.name.replace('_', ' ')}</span>
-                                                            <span>{(organ.severity * 100).toFixed(0)}%</span>
-                                                        </div>
-                                                        <p className="text-[10px] text-slate-400 mb-0.5">{info.risk}</p>
-                                                        <p className="text-[10px] text-teal-400 italic">Mitigation: {info.mitigation}</p>
-                                                    </div>
-                                                );
-                                            });
+                                            return normalized;
                                         })()}
-                                        {analysis.global_risk > 0.7 && (
-                                            <div className="pt-2 border-t border-slate-700 text-[10px] text-yellow-400 font-semibold">
-                                                ⚠️ Overall risk is high – please contact your doctor before changing any medication.
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            )}
-                        </>
-                    ) : (
-                        // Network View - Supports Toggle
-                        networkSubMode === '3d_map' ? (
-                            <NetworkBodyView analysis={analysis} drugs={drugs} onOrganClick={setSelectedOrgan} gender={gender} />
-                        ) : (
-                            <DrugNetwork3D analysis={analysis} drugs={drugs} />
-                        )
-                    )}
-                </div>
+                                        onOrganClick={(organ) => setSelectedOrgan(organ)}
+                                        bodyOpacity={0.15}
+                                    />
+                                    {/* Interactive Controls */}
+                                    <OrbitControls
+                                        target={[0, 1.0, 0]}
+                                        enablePan={true}
+                                        enableZoom={true}
+                                        enableRotate={true}
+                                        minDistance={2}
+                                        maxDistance={8}
+                                        maxPolarAngle={Math.PI / 1.5}
+                                        minPolarAngle={Math.PI / 4}
+                                    />
+                                </Canvas>
 
-                {/* View Toggle & Stats */}
-                <div className="absolute top-4 right-4 flex flex-col items-end gap-2 pointer-events-none">
-                    <div className="bg-black/40 backdrop-blur border border-slate-700 p-1 rounded-lg flex pointer-events-auto">
-                        <button
-                            onClick={() => setCenterViewMode('body')}
-                            className={`px-3 py-1 text-xs font-bold rounded transition-colors flex items-center gap-1 ${centerViewMode === 'body' ? 'bg-teal-600 text-white' : 'text-slate-400 hover:text-white'}`}
-                        >
-                            <User size={14} /> BODY
-                        </button>
-                        <button
-                            onClick={() => setCenterViewMode('network')}
-                            className={`px-3 py-1 text-xs font-bold rounded transition-colors flex items-center gap-1 ${centerViewMode === 'network' ? 'bg-teal-600 text-white' : 'text-slate-400 hover:text-white'}`}
-                        >
-                            <Network size={14} /> NETWORK
-                        </button>
+                                {/* Tooltip for hovered organ */}
+                                {selectedOrgan && (
+                                    <div className="absolute bottom-20 md:bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-sm border border-teal-500/50 px-4 py-2 rounded-lg pointer-events-none z-20">
+                                        <p className="text-teal-400 font-bold text-sm capitalize">
+                                            {selectedOrgan.replace('_', ' ')}
+                                        </p>
+                                    </div>
+                                )}
+
+                                {/* Risk Mitigation Card - Hidden on mobile view to save space, or moved */}
+                                {analysis && (
+                                    <div className="absolute bottom-20 md:bottom-4 left-4 right-4 md:right-auto md:w-64 bg-slate-900/90 backdrop-blur border border-red-500/30 rounded-lg p-3 shadow-lg pointer-events-auto z-10 max-h-[30vh] overflow-y-auto">
+                                        <div className="flex items-center gap-2 mb-2 border-b border-slate-700 pb-2">
+                                            <Shield size={16} className="text-red-400" />
+                                            <h3 className="text-xs font-bold text-slate-200">KEY RISKS & MITIGATION</h3>
+                                        </div>
+                                        <div className="space-y-3">
+                                            {(() => {
+                                                const impacts = analysis.region_impacts || analysis.organ_impacts || {};
+                                                const highRiskOrgans = Object.entries(impacts)
+                                                    .map(([name, data]: [string, any]) => ({
+                                                        name,
+                                                        severity: typeof data === 'object' ? data.severity : data,
+                                                        symptoms: typeof data === 'object' ? data.symptoms : []
+                                                    }))
+                                                    .filter(o => o.severity >= 0.5)
+                                                    .sort((a, b) => b.severity - a.severity)
+                                                    .slice(0, 3);
+
+                                                if (highRiskOrgans.length === 0) {
+                                                    return <p className="text-[10px] text-slate-400">No high-risk organs detected.</p>;
+                                                }
+
+                                                const riskMap: any = {
+                                                    liver: { risk: "Liver strain/enzyme elevation", mitigation: "Avoid alcohol, limit acetaminophen." },
+                                                    kidneys: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
+                                                    kidney_left: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
+                                                    kidney_right: { risk: "Reduced filtration function", mitigation: "Hydrate well, monitor BP." },
+                                                    stomach: { risk: "Ulcers or GI bleeding", mitigation: "Take with food, avoid NSAIDs." },
+                                                    heart: { risk: "Rhythm or BP issues", mitigation: "Monitor pulse/BP regularly." },
+                                                    brain: { risk: "Dizziness or confusion", mitigation: "Avoid driving if dizzy." },
+                                                    lungs: { risk: "Respiratory depression", mitigation: "Monitor breathing rate." }
+                                                };
+
+                                                return highRiskOrgans.map((organ, i) => {
+                                                    const info = riskMap[organ.name.toLowerCase()] || { risk: "General organ stress", mitigation: "Monitor for symptoms." };
+                                                    return (
+                                                        <div key={i} className="text-xs">
+                                                            <div className="flex justify-between text-red-300 font-semibold">
+                                                                <span className="capitalize">{organ.name.replace('_', ' ')}</span>
+                                                                <span>{(organ.severity * 100).toFixed(0)}%</span>
+                                                            </div>
+                                                            <p className="text-[10px] text-slate-400 mb-0.5">{info.risk}</p>
+                                                            <p className="text-[10px] text-teal-400 italic">Mitigation: {info.mitigation}</p>
+                                                        </div>
+                                                    );
+                                                });
+                                            })()}
+                                            {analysis.global_risk > 0.7 && (
+                                                <div className="pt-2 border-t border-slate-700 text-[10px] text-yellow-400 font-semibold">
+                                                    ⚠️ Overall risk is high – please contact your doctor before changing any medication.
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+                            </>
+                        ) : (
+                            // Network View - Supports Toggle
+                            networkSubMode === '3d_map' ? (
+                                <NetworkBodyView analysis={analysis} drugs={drugs} onOrganClick={setSelectedOrgan} gender={gender} />
+                            ) : (
+                                <DrugNetwork3D analysis={analysis} drugs={drugs} />
+                            )
+                        )}
                     </div>
 
-                    {/* Sub-toggle for Network View */}
-                    {centerViewMode === 'network' && (
-                        <div className="bg-black/40 backdrop-blur border border-slate-700 p-1 rounded-lg flex pointer-events-auto animate-in fade-in slide-in-from-top-2">
+                    {/* View Toggle & Stats */}
+                    <div className="absolute top-4 right-4 flex flex-col items-end gap-2 pointer-events-none z-20">
+                        <div className="bg-black/40 backdrop-blur border border-slate-700 p-1 rounded-lg flex pointer-events-auto">
                             <button
-                                onClick={() => setNetworkSubMode('3d_map')}
-                                className={`px-3 py-1 text-xs font-bold rounded transition-colors ${networkSubMode === '3d_map' ? 'bg-teal-600/50 text-teal-100' : 'text-slate-400 hover:text-white'}`}
+                                onClick={() => setCenterViewMode('body')}
+                                className={`px-3 py-1 text-xs font-bold rounded transition-colors flex items-center gap-1 ${centerViewMode === 'body' ? 'bg-teal-600 text-white' : 'text-slate-400 hover:text-white'}`}
                             >
-                                3D MAP
+                                <User size={14} /> BODY
                             </button>
                             <button
-                                onClick={() => setNetworkSubMode('graph')}
-                                className={`px-3 py-1 text-xs font-bold rounded transition-colors ${networkSubMode === 'graph' ? 'bg-teal-600/50 text-teal-100' : 'text-slate-400 hover:text-white'}`}
+                                onClick={() => setCenterViewMode('network')}
+                                className={`px-3 py-1 text-xs font-bold rounded transition-colors flex items-center gap-1 ${centerViewMode === 'network' ? 'bg-teal-600 text-white' : 'text-slate-400 hover:text-white'}`}
                             >
-                                GRAPH
+                                <Network size={14} /> NETWORK
                             </button>
                         </div>
-                    )}
 
-                    <div className="bg-black/40 backdrop-blur border border-slate-700 p-3 rounded-lg pointer-events-auto">
-                        <div className="text-xs text-slate-400">GLOBAL RISK</div>
-                        <div className={`text-xl font-bold ${analysis?.global_risk > 0.7 ? 'text-red-500' :
-                            analysis?.global_risk > 0.4 ? 'text-yellow-500' : 'text-teal-500'
-                            }`}>
-                            {analysis?.global_risk ? `${(analysis.global_risk * 100).toFixed(0)}%` : 'N/A'}
+                        {/* Sub-toggle for Network View */}
+                        {centerViewMode === 'network' && (
+                            <div className="bg-black/40 backdrop-blur border border-slate-700 p-1 rounded-lg flex pointer-events-auto animate-in fade-in slide-in-from-top-2">
+                                <button
+                                    onClick={() => setNetworkSubMode('3d_map')}
+                                    className={`px-3 py-1 text-xs font-bold rounded transition-colors ${networkSubMode === '3d_map' ? 'bg-teal-600/50 text-teal-100' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    3D MAP
+                                </button>
+                                <button
+                                    onClick={() => setNetworkSubMode('graph')}
+                                    className={`px-3 py-1 text-xs font-bold rounded transition-colors ${networkSubMode === 'graph' ? 'bg-teal-600/50 text-teal-100' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    GRAPH
+                                </button>
+                            </div>
+                        )}
+
+                        <div className="bg-black/40 backdrop-blur border border-slate-700 p-3 rounded-lg pointer-events-auto">
+                            <div className="text-xs text-slate-400">GLOBAL RISK</div>
+                            <div className={`text-xl font-bold ${analysis?.global_risk > 0.7 ? 'text-red-500' :
+                                analysis?.global_risk > 0.4 ? 'text-yellow-500' : 'text-teal-500'
+                                }`}>
+                                {analysis?.global_risk ? `${(analysis.global_risk * 100).toFixed(0)}%` : 'N/A'}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Right Panel: Tabs (Agent / Audit / Analytics) */}
-            <div className="w-96 border-l border-slate-800 z-10 flex flex-col bg-slate-900/80 backdrop-blur">
+            <div className={`${mobileTab === 'details' ? 'flex' : 'hidden'} md:flex w-full md:w-96 border-l border-slate-800 z-10 flex-col bg-slate-900/80 backdrop-blur pb-20 md:pb-0`}>
                 <div className="flex border-b border-slate-800">
                     <button
                         className={`flex-1 p-2 text-xs font-bold flex items-center justify-center gap-1 transition-colors ${rightPanelMode === 'chat'
@@ -401,11 +408,35 @@ export default function Dashboard() {
                 </div>
             </div>
 
+            {/* Mobile Bottom Navigation */}
+            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-800 flex justify-around p-3 z-50 safe-area-bottom">
+                <button
+                    onClick={() => setMobileTab('controls')}
+                    className={`flex flex-col items-center gap-1 text-[10px] font-bold ${mobileTab === 'controls' ? 'text-teal-400' : 'text-slate-500'}`}
+                >
+                    <Search size={20} />
+                    INPUT
+                </button>
+                <button
+                    onClick={() => setMobileTab('view')}
+                    className={`flex flex-col items-center gap-1 text-[10px] font-bold ${mobileTab === 'view' ? 'text-teal-400' : 'text-slate-500'}`}
+                >
+                    <User size={20} />
+                    3D VIEW
+                </button>
+                <button
+                    onClick={() => setMobileTab('details')}
+                    className={`flex flex-col items-center gap-1 text-[10px] font-bold ${mobileTab === 'details' ? 'text-teal-400' : 'text-slate-500'}`}
+                >
+                    <Activity size={20} />
+                    DETAILS
+                </button>
+            </div>
 
             {/* Error Toast */}
             {
                 error && (
-                    <div className="absolute bottom-4 right-4 bg-red-900/90 border border-red-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 animate-in slide-in-from-bottom-5 z-50">
+                    <div className="absolute bottom-20 md:bottom-4 right-4 bg-red-900/90 border border-red-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 animate-in slide-in-from-bottom-5 z-50">
                         <div className="bg-red-500 rounded-full p-1">
                             <X size={12} />
                         </div>
