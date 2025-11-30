@@ -4,6 +4,15 @@
 
 PharmAI Nexus is an advanced AI-driven platform that visualizes drug interactions on a 3D human body, explains mechanisms using Generative AI, and predicts risks using Graph Machine Learning.
 
+## 🌐 Live Deployment
+
+| Component | Platform | Status | Link |
+|-----------|----------|--------|------|
+| **Frontend** | **Netlify** | 🟢 Live | [**https://pharm-nexus.netlify.app/**](https://pharm-nexus.netlify.app/) |
+| **Backend** | **Render** | 🟢 Live | [**https://pharmnexus.onrender.com**](https://pharmnexus.onrender.com/docs) |
+
+> **Note:** The backend is hosted on a free tier instance on Render, so it may spin down after inactivity. Please allow 50-60 seconds for the initial request to wake it up.
+
 ## 🌟 Key Features
 
 - **3D Bio-Visualization**: Interactive 3D human body showing organ-level impact of drugs (Green/Yellow/Red severity).
